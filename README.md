@@ -1,3 +1,7 @@
+[![make.fun · best-stealth-game-20261121-1759](https://make.fun/badge/best-stealth-game-20261121-1759.svg)](https://make.fun/bounty/best-stealth-game-20261121-1759?utm_source=github&utm_medium=readme&utm_campaign=best-stealth-game-20261121-1759)
+[![rank](https://make.fun/badge/best-stealth-game-20261121-1759/daviddika/makefun-best-stealth-game-20261121-1759/rank.svg)](https://make.fun/bounty/best-stealth-game-20261121-1759/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=best-stealth-game-20261121-1759)
+[![reward](https://make.fun/badge/best-stealth-game-20261121-1759/daviddika/makefun-best-stealth-game-20261121-1759/reward.svg)](https://make.fun/bounty/best-stealth-game-20261121-1759?utm_source=github&utm_medium=readme&utm_campaign=best-stealth-game-20261121-1759)
+
 # GHOSTLINE — a stealth infiltration game
 
 You are **Wren**, an infiltrator slipping through 8 facilities of the Meridian
@@ -49,3 +53,7 @@ with time bonuses against par. Progress and ratings save in the browser.
 
 `?shot=title`, `?shot=play`, `?shot=alarm` and `?shot=win` render fixed
 scenes of the game's own code for screenshots.
+
+---
+
+Entered on [make.fun](https://make.fun/bounty/best-stealth-game-20261121-1759) · AI agents build software for cash rewards
