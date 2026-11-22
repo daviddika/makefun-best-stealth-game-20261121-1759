@@ -1,0 +1,62 @@
+/* GHOSTLINE — page chrome. All art inside the game is drawn on canvas. */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  background: #07090d radial-gradient(1200px 600px at 50% -10%, #16202e 0%, #07090d 60%);
+  color: #d7e3d0;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  display: flex; align-items: center; justify-content: center;
+  min-height: 100vh; padding: 12px;
+}
+#wrap { width: 984px; max-width: 100%; }
+#topbar {
+  display: flex; align-items: baseline; gap: 16px;
+  padding: 8px 4px 10px; border-bottom: 1px solid #22303a;
+}
+#brand { font-size: 26px; font-weight: 800; letter-spacing: 4px; color: #e8f4e2; }
+#brand span { color: #7ee787; }
+#objective { flex: 1; color: #9fb3a4; font-size: 14px; letter-spacing: 1px; }
+#clock { font-variant-numeric: tabular-nums; color: #c9d6c2; font-size: 15px; }
+#stage { position: relative; margin-top: 10px; }
+canvas#game {
+  display: block; width: 960px; max-width: 100%; height: auto;
+  background: #0b0f14; border: 1px solid #2a3a2f; border-radius: 6px;
+  box-shadow: 0 0 0 1px #000, 0 18px 50px rgba(0,0,0,.6);
+  cursor: crosshair;
+}
+#overlay {
+  position: absolute; inset: 0; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; text-align: center;
+  background: rgba(5, 8, 11, 0.82); border-radius: 6px; padding: 24px;
+}
+#overlay.hidden { display: none; }
+#overlay h1 { font-size: 46px; letter-spacing: 8px; color: #e8f4e2; }
+#overlay h1 em { font-style: normal; color: #7ee787; }
+#overlay h2 { font-size: 30px; letter-spacing: 4px; color: #e8f4e2; margin-bottom: 6px; }
+#overlay p { color: #a9bda9; font-size: 15px; line-height: 1.6; max-width: 560px; margin: 6px 0; }
+#overlay .sub { color: #7ee787; letter-spacing: 2px; font-size: 13px; text-transform: uppercase; }
+#overlay .big { font-size: 22px; color: #ffd479; letter-spacing: 2px; }
+#overlay .menu { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 14px 0 4px; max-width: 640px; }
+#overlay button {
+  background: #14201a; color: #d7e3d0; border: 1px solid #3a5a44;
+  border-radius: 4px; padding: 9px 14px; font-size: 14px; cursor: pointer;
+  font-family: inherit; letter-spacing: .5px;
+}
+#overlay button:hover { background: #1d3226; border-color: #7ee787; color: #fff; }
+#overlay button.primary { background: #1d4d2a; border-color: #7ee787; color: #eaffea; font-weight: 700; }
+#overlay button.locked { opacity: .45; cursor: default; }
+#overlay button.locked:hover { border-color: #3a5a44; background: #14201a; color: #d7e3d0; }
+#overlay .keys { font-size: 12px; color: #7d8f80; margin-top: 10px; line-height: 1.7; }
+#overlay .rating { font-size: 34px; letter-spacing: 6px; color: #7ee787; margin: 4px 0; }
+#toast {
+  position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%);
+  background: rgba(10, 16, 12, .92); border: 1px solid #3a5a44; color: #e8f4e2;
+  padding: 7px 14px; border-radius: 4px; font-size: 14px; letter-spacing: .5px;
+  opacity: 0; transition: opacity .25s; pointer-events: none; white-space: nowrap;
+}
+#toast.show { opacity: 1; }
+#helpbar {
+  display: flex; flex-wrap: wrap; gap: 4px 18px; justify-content: center;
+  padding: 10px 4px 0; color: #7d8f80; font-size: 12.5px;
+}
+#helpbar b { color: #b9cbb4; }

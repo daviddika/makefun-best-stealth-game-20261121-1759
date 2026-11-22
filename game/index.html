@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GHOSTLINE — a stealth infiltration game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrap">
+  <header id="topbar">
+    <div id="brand">GHOST<span>LINE</span></div>
+    <div id="objective">Reach the exit unseen.</div>
+    <div id="clock">00:00</div>
+  </header>
+  <div id="stage">
+    <canvas id="game" width="960" height="608"></canvas>
+    <div id="overlay" class="screen"></div>
+    <div id="toast"></div>
+  </div>
+  <footer id="helpbar">
+    <span><b>WASD / Arrows</b> move</span>
+    <span><b>Shift</b> sneak</span>
+    <span><b>E</b> interact</span>
+    <span><b>Q</b> noisemaker</span>
+    <span><b>F</b> smoke pellet</span>
+    <span><b>R</b> veil cloak</span>
+    <span><b>Click</b> throw noisemaker</span>
+    <span><b>P</b> pause</span>
+    <span><b>M</b> mute</span>
+  </footer>
+</div>
+<script src="levels.js"></script>
+<script src="audio.js"></script>
+<script src="guards.js"></script>
+<script src="render.js"></script>
+<script src="ui.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
