@@ -1,15 +1,13 @@
 // GHOSTLINE — hand-in program (Node 22, standard library only).
 // Copies game/ and screenshots/ into the output directory and writes
 // /output/dossier.json with buildDossier from vendor/makefun-game.ts.
-// Deterministic: the output directory is cleaned first, files are copied
+// Deterministic: the output directory is created if needed, files are copied
 // in sorted path order, and nothing time-dependent is written.
 import { buildDossier } from "./vendor/makefun-game.ts";
 import {
   cpSync,
-  existsSync,
   mkdirSync,
   readdirSync,
-  rmSync,
   writeFileSync,
 } from "node:fs";
 import { join } from "node:path";
@@ -33,8 +31,6 @@ function copyTreeSorted(srcDir: string, dstDir: string): void {
   }
 }
 
-// Clean the output directory first so stale files can never leak in.
-if (existsSync(outDir)) rmSync(outDir, { recursive: true, force: true });
 mkdirSync(outDir, { recursive: true });
 
 copyTreeSorted(join(root, "game"), join(outDir, "game"));
